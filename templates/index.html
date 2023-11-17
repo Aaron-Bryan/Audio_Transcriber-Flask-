@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Speech Recognition</title>
+</head>
+<body>
+
+<div id="Main_Container">
+
+    <h1>Upload New File</h1>
+    <form method="post" enctype="multipart/form-data">
+        <input type="file" name="file"/>
+        <br>
+        <input type="submit" value="Transcribe"/>
+    </form>
+
+    #Some weird jinja shit
+    {% if transcript != "" %}
+    <div id="Transcript_Container">
+        <h1>Transcript</h1>
+        <p>{{transcript}}</p>
+    </div>
+    {% endif %}
+
+</div>
+
+</body>
+</html>
